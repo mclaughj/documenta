@@ -1,0 +1,34 @@
+// title: grid css
+// author: m@cl.ly
+
+// section: wrapper
+// ----------------------------------------------
+.wrapper {
+  margin: 0 auto;
+  width: 960px;
+}
+// ----------------------------------------------
+
+// section: grid
+// ----------------------------------------------
+@mixin grid($count, $space) {
+  float: left;
+  margin: 0 $space*24px 0 0;
+  width: $count*24px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+#grid-debug {
+  background: url(/images/grid.png) repeat-y;
+  height: 100%;
+  left: 50%;
+  margin: 0 0 0 -480px;
+  opacity: .1;
+  position: absolute;
+  width: 960px;
+  z-index: 99999;
+}
+// ----------------------------------------------

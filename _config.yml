@@ -1,0 +1,6 @@
+permalink: /:title
+exclude:
+  - config.rb
+  - config.ru
+  - Gemfile
+  - Gemfile.lock
