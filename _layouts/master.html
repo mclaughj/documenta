@@ -1,0 +1,47 @@
+---
+sidebar_cats:
+- test_category
+---
+
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>Site Name - {{ page.title }}</title>
+
+    <meta charset='utf-8' />
+    <meta content='' name='keywords' />
+    <meta content='' name='description' />
+
+    <link href='/stylesheets/screen.css' media="screen" rel='stylesheet' type='text/css' />
+  </head>
+
+  <body>
+    <section id="content">
+      <section id="main">
+        <h1>{{ page.title }}</h1>
+
+        <div class="wikistyle">
+          {{ content }}
+        </div>
+      </section>
+
+      <aside id="sidebar">
+        {% for cat in (page.sidebar_cats) %}
+          <h3>{{ cat | replace:'_',' ' | capitalize }}</h3>
+
+          <ul id="categories">
+            {% for post in site.posts reversed %}
+              {% if post.categories contains cat %}
+                {% if page.title == post.title %}
+                  <li>{{ page.title }}</li>
+                {% else %}
+                  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </aside>
+    </section>
+  </body>
+</html>
