@@ -1,6 +1,7 @@
 ---
 sidebar_cats:
-- test_category
+- getting_started
+- sample_category
 ---
 
 <!DOCTYPE html>
@@ -13,35 +14,61 @@ sidebar_cats:
     <meta content='' name='description' />
 
     <link href='/stylesheets/screen.css' media="screen" rel='stylesheet' type='text/css' />
+
+    <meta content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = no" name="viewport" />
   </head>
 
   <body>
-    <section id="content">
-      <section id="main">
+    <header id="header">
+      <div class="wrapper">
+        <h1>Hello World</h1>
+      </div>
+    </header>
+
+    <section class="wikistyle" id="content">
+      <div class="wrapper">
         <h1>{{ page.title }}</h1>
 
-        <div class="wikistyle">
+        <section id="main">
           {{ content }}
-        </div>
-      </section>
+        </section>
 
-      <aside id="sidebar">
-        {% for cat in (page.sidebar_cats) %}
-          <h3>{{ cat | replace:'_',' ' | capitalize }}</h3>
+        <aside id="sidebar">
+          {% for cat in (page.sidebar_cats) %}
+            <h3>{{ cat | replace:'_',' ' | capitalize }}</h3>
 
-          <ul id="categories">
-            {% for post in site.posts reversed %}
-              {% if post.categories contains cat %}
-                {% if page.title == post.title %}
-                  <li>{{ page.title }}</li>
-                {% else %}
-                  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            <ul id="categories">
+              {% for post in site.posts reversed %}
+                {% if post.categories contains cat %}
+                  {% if page.title == post.title %}
+                    <li>{{ page.title }}</li>
+                  {% else %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                  {% endif %}
                 {% endif %}
-              {% endif %}
-            {% endfor %}
-          </ul>
-        {% endfor %}
-      </aside>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        </aside>
+      </div>
     </section>
+
+    <footer id="footer">
+      <div class="wrapper">
+        <ul class="left">
+          <li>&copy;{{ site.time | date: "%Y" }} My Awesome Company</li>
+
+          <li><a href="#">Link 1</a></li>
+
+          <li><a href="#">Link 2</a></li>
+
+          <li><a href="#">Link 3</a></li>
+        </ul>
+
+        <ul class="right">
+          <li><a href="#">Additional Link</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
