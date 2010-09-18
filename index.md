@@ -39,7 +39,7 @@ Sign up for a **free** Heroku account and read the [Quickstart Guide](http://doc
 Generate your Jekyll site locally (Heroku is a [read-only file system](http://docs.heroku.com/constraints#read-only-filesystem)) and make sure your SASS stylesheets are up to date:
 
     cd my_doc_directory
-    compass watch
+    compass compile
     jekyll
 
 Turn the directory into a git repository:
