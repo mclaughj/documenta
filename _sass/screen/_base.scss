@@ -20,7 +20,7 @@ body {
   margin: 0 0 24px 0;
 
   .wrapper {
-    @include pie-clearfix;
+    @include pie_clearfix;
 
     h1 {
       float: left;
@@ -38,7 +38,7 @@ body {
       float: right;
 
       ul {
-        @include pie-clearfix;
+        @include pie_clearfix;
 
         li {
           float: left;
@@ -59,7 +59,7 @@ body {
           }
 
           &:last-child {
-            margin: 0;
+            @extend .no_right;
           }
         }
       }
@@ -72,7 +72,7 @@ body {
 // ----------------------------------------------
 #content {
   .wrapper {
-    @include pie-clearfix;
+    @include pie_clearfix;
 
     #main {
       @include grid(28, 2);
@@ -112,10 +112,10 @@ body {
   .wrapper {
     border-top: 1px solid #e5e5e5;
     padding: 12px 0 0 0;
-    @include pie-clearfix;
+    @include pie_clearfix;
 
     ul {
-      @include pie-clearfix;
+      @include pie_clearfix;
 
       li {
         border-right: 1px solid #e5e5e5;

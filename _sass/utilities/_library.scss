@@ -22,7 +22,7 @@
   overflow: hidden;
 }
 
-@mixin pie-clearfix {
+@mixin pie_clearfix {
   &:after {
     clear: both;
     content: ".";
