@@ -30,6 +30,39 @@ We think keeping your documentation in plain text files is awesome:
 
 ##Deploying
 
-Deploying is extremely easy.
+Deploying is extremely easy. We recommend [Heroku](http://heroku.com/) or [Github](http://github.com/) but anything that can run [Rack](http://github.com/bry4n/rack-jekyll/) applications will work.
 
-> I can has block quote?
+###Heroku
+
+Sign up for a **free** Heroku account and read the [Quickstart Guide](http://docs.heroku.com/quickstart/). Once you know what you are doing simply follow the steps below.
+
+Generate your Jekyll site locally (Heroku is a [read-only file system](http://docs.heroku.com/constraints#read-only-filesystem)) and make sure your SASS stylesheets are up to date:
+
+    cd my_doc_directory
+    compass watch
+    jekyll
+
+Turn the directory into a git repository:
+
+    git init && git add .
+
+Commit your changes and get ready to deploy:
+
+    git commit -m "my documentation is ready"
+
+Create the Heroku app:
+
+    heroku create
+
+Push to Heroku:
+
+    git push heroku master
+
+###Github
+
+Deploying to Github is even easier. All you need to do is create a Github Page. Some of the files included in this repository are not necessary for this. You can remove the following files (they are only included to make a Heroku deploy easy):
+
+    config.rb
+    config.ru
+    Gemfile
+    Gemfile.lock
