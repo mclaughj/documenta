@@ -10,6 +10,7 @@ body {
     family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
     size: 12px;
   }
+  padding: 48px 0;
 }
 // ----------------------------------------------
 
@@ -125,46 +126,49 @@ body {
 // ----------------------------------------------
 #header {
   margin: 0 0 24px 0;
-  @include pie-clearfix;
 
-  h1 {
-    float: left;
+  .wrapper {
+    @include pie-clearfix;
 
-    a {
-      background: url(/images/logo.png) no-repeat;
-      display: block;
-      height: 30px;
-      text-indent: -99999px;
-      width: 170px;
+    h1 {
+      float: left;
+
+      a {
+        background: url(/images/logo.png) no-repeat;
+        display: block;
+        height: 30px;
+        text-indent: -99999px;
+        width: 170px;
+      }
     }
-  }
 
-  nav {
-    float: right;
+    nav {
+      float: right;
 
-    ul {
-      @include pie-clearfix;
+      ul {
+        @include pie-clearfix;
 
-      li {
-        float: left;
-        line-height: 30px;
-        margin: 0 24px 0 0;
+        li {
+          float: left;
+          line-height: 30px;
+          margin: 0 24px 0 0;
 
-        a:link, a:visited {
-          color: #262626;
-          font: {
-            size: 13px;
-            weight: bold;
+          a:link, a:visited {
+            color: #262626;
+            font: {
+              size: 13px;
+              weight: bold;
+            }
+            text-decoration: none;
           }
-          text-decoration: none;
-        }
 
-        a:hover, a:active {
-          color: #195a9a;
-        }
+          a:hover, a:active {
+            color: #195a9a;
+          }
 
-        &:last-child {
-          margin: 0;
+          &:last-child {
+            margin: 0;
+          }
         }
       }
     }
@@ -175,32 +179,34 @@ body {
 // section: content
 // ----------------------------------------------
 #content {
-  @include pie-clearfix;
+  .wrapper {
+    @include pie-clearfix;
 
-  #main {
-    @include grid(28, 2);
-  }
+    #main {
+      @include grid(28, 2);
+    }
 
-  #sidebar {
-    @include grid(10, 0);
+    #sidebar {
+      @include grid(10, 0);
 
-    ul {
-      margin: 0 0 24px 0;
-      padding: 0 0 0 24px;
+      ul {
+        margin: 0 0 24px 0;
+        padding: 0 0 0 24px;
 
-      li {
-        color: #565656;
-        line-height: 14px;
-        list-style-image: url(/images/sidebar_list_style_image.png);
-        list-style-type: none;
-
-        a:link, a:visited {
+        li {
           color: #565656;
-          font-weight: bold;
-        }
+          line-height: 14px;
+          list-style-image: url(/images/sidebar_list_style_image.png);
+          list-style-type: none;
 
-        a:hover, a:active {
-          color: #195a9a;
+          a:link, a:visited {
+            color: #565656;
+            font-weight: bold;
+          }
+
+          a:hover, a:active {
+            color: #195a9a;
+          }
         }
       }
     }
