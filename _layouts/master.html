@@ -37,7 +37,7 @@ sidebar_cats:
           {% for cat in (page.sidebar_cats) %}
             <h3>{{ cat | replace:'_',' ' | capitalize }}</h3>
 
-            <ul id="categories">
+            <ul>
               {% for post in site.posts reversed %}
                 {% if post.categories contains cat %}
                   {% if page.title == post.title %}
