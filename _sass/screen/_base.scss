@@ -74,23 +74,25 @@ body {
     }
   }
 
-  ul {
+  ul, ol {
     margin: 0 0 24px 0;
-    padding: 0 0 0 24px;
+    padding: 0 0 24px 0;
 
     li {
-      list-style: disc;
+      line-height: 20px;
       margin: 0 0 12px 0;
     }
   }
 
-  ol {
-    margin: 0 0 24px 0;
-    padding: 0 0 0 24px;
+  ul {
+    li {
+      list-style: disc;
+    }
+  }
 
+  ol {
     li {
       list-style: decimal;
-      margin: 0 0 12px 0;
     }
   }
 
@@ -144,7 +146,7 @@ body {
 
       li {
         color: #565656;
-        line-height: 18px;
+        line-height: 14px;
         list-style-image: url(/images/sidebar_list_style_image.png);
         list-style-type: none;
 
