@@ -88,6 +88,7 @@
     background: #f0f6fc;
     border: 1px solid #d2dce6;
     margin: 0 0 24px 0;
+    overflow-y: auto;
     padding: 8px;
 
     code {
@@ -96,6 +97,7 @@
         family: Monaco, monospace;
         size: 12px;
       }
+      display: block;
       line-height: 18px;
     }
   }
