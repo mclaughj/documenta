@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <title>Site Name - Welcome</title>
+
+    <meta charset='utf-8' />
+    <meta content='' name='keywords' />
+    <meta content='' name='description' />
+
+    <link href='/stylesheets/screen.css' media="screen" rel='stylesheet' type='text/css' />
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="wrapper">
+        <h1><a href="/">Hello World</a></h1>
+
+        <nav>
+          <ul>
+            <li><a href="#">Main Link 1</a></li>
+            <li><a href="#">Main Link 2</a></li>
+            <li><a href="#">Main Link 3</a></li>
+            <li><a href="#">Main Link 4</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="wikistyle" id="content">
+      <div class="wrapper">
+        <h1>Welcome</h1>
+
+        <section id="main">
+          <p>This is a template for your app&#8217;s documentation (we hope your app has <a href='http://getcloudapp.com/'>CloudApp</a> support built in — it really should). Collaborative writing and constant updates have to be well supported when it comes to maintaining technical documentation.</p>
+
+<p>We chose <a href='http://git-scm.com/'>Git</a>, <a href='http://github.com/mojombo/jekyll/'>Jekyll</a> and <a href='http://sass-lang.com/'>SASS</a> to get the job done. If you have never heard of Jekyll or SASS don&#8217;t worry, it&#8217;s very easy to get up and running. Should you be unfamiliar with Git this might not be the right thing for you.</p>
+
+<h2 id='writing_content'>Writing content</h2>
+
+<p>Documentation consists of separate Markdown files placed inside <code>_posts</code>. You might want to take a look at a our examples. All posts are categorized and available from the sidebar.</p>
+
+<p>The available categories can be found in <code>_layouts/master.html</code>. It&#8217;s as simple as adding another item to that list to create a new category. To assign a post to a specific category just include it in the post&#8217;s configuration.</p>
+
+<p>This is what the typical configuration for a post looks like:</p>
+
+<pre><code>---
+layout: master
+title: Document Title
+categories: category_one category_two
+---</code></pre>
+
+<p>We think keeping your documentation in plain text files is awesome:</p>
+
+<ul>
+<li>You can use your favorite <a href='http://macromates.org/'>TextEditor</a> to write posts.</li>
+
+<li>The generated markup is concise thanks to <a href='http://daringfireball.net/projects/markdown/'>Markdown</a>.</li>
+
+<li>Collaboration with your team is easy and versioning is built right in.</li>
+
+<li>You can use your precious time writing posts instead of fiddling with a database.</li>
+</ul>
+
+<h2 id='deploying'>Deploying</h2>
+
+<p>Deploying is extremely easy. We recommend <a href='http://heroku.com/'>Heroku</a> or <a href='http://github.com/'>Github</a> but anything that can run <a href='http://github.com/bry4n/rack-jekyll/'>Rack</a> applications will work.</p>
+
+<h3 id='heroku'>Heroku</h3>
+
+<p>Sign up for a <strong>free</strong> Heroku account and read the <a href='http://docs.heroku.com/quickstart/'>Quickstart Guide</a>. Once you know what you are doing simply follow the steps below.</p>
+
+<p>Generate your Jekyll site locally (Heroku is a <a href='http://docs.heroku.com/constraints#read-only-filesystem'>read-only file system</a>) and make sure your SASS stylesheets are up to date:</p>
+
+<pre><code>cd my_doc_directory
+compass watch
+jekyll</code></pre>
+
+<p>Turn the directory into a git repository:</p>
+
+<pre><code>git init &amp;&amp; git add .</code></pre>
+
+<p>Commit your changes and get ready to deploy:</p>
+
+<pre><code>git commit -m &quot;my documentation is ready&quot;</code></pre>
+
+<p>Create the Heroku app:</p>
+
+<pre><code>heroku create</code></pre>
+
+<p>Push to Heroku:</p>
+
+<pre><code>git push heroku master</code></pre>
+
+<h3 id='github'>Github</h3>
+
+<p>Deploying to Github is even easier. All you need to do is create a Github Page. Some of the files included in this repository are not necessary for this. You can remove the following files (they are only included to make a Heroku deploy easy):</p>
+
+<pre><code>config.rb
+config.ru
+Gemfile
+Gemfile.lock</code></pre>
+        </section>
+
+        <aside id="sidebar">
+          
+            <h3>Category one</h3>
+
+            <ul>
+              
+                
+                  
+                    <li><a href="/this-is-an-example">This is an Example</a></li>
+                  
+                
+              
+                
+                  
+                    <li><a href="/this-is-another-example">This is another Example</a></li>
+                  
+                
+              
+                
+              
+            </ul>
+          
+            <h3>Category two</h3>
+
+            <ul>
+              
+                
+              
+                
+              
+                
+                  
+                    <li><a href="/this-is-the-last-example">This is the last Example</a></li>
+                  
+                
+              
+            </ul>
+          
+        </aside>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="wrapper">
+        <ul class="left">
+          <li>&copy;2010 My Awesome Company</li>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+
+        <ul class="right">
+          <li><a href="#">Additional Link</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
