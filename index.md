@@ -60,7 +60,7 @@ Push to Heroku:
 
 ###Github
 
-Deploying to Github is even easier. All you need to do is create a Github Page. Some of the files included in this repository are not necessary for this. You can remove the following files (they are only included to make a Heroku deploy easy):
+Deploying to Github is even easier. All you need to do is create a [Github Page](http://pages.github.com/). Some of the files included in this repository are not necessary for this. You can remove the following files (they are only included to make a Heroku deploy easy):
 
     config.rb
     config.ru
