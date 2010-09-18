@@ -125,6 +125,50 @@ body {
 // ----------------------------------------------
 #header {
   margin: 0 0 24px 0;
+  @include pie-clearfix;
+
+  h1 {
+    float: left;
+
+    a {
+      background: url(/images/logo.png) no-repeat;
+      display: block;
+      height: 30px;
+      text-indent: -99999px;
+      width: 170px;
+    }
+  }
+
+  nav {
+    float: right;
+
+    ul {
+      @include pie-clearfix;
+
+      li {
+        float: left;
+        line-height: 30px;
+        margin: 0 24px 0 0;
+
+        a:link, a:visited {
+          color: #262626;
+          font: {
+            size: 13px;
+            weight: bold;
+          }
+          text-decoration: none;
+        }
+
+        a:hover, a:active {
+          color: #195a9a;
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 // ----------------------------------------------
 
